@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Daftar Kegiatan</title>
+</head>
+<body>
+  <header>
+    <h1>Pendaftaran kegiatan</h1>
+    <nav>
+      <a href="index.html">Beranda</a>
+      <a href="daftar.html">Daftar</a>
+      <a href="jadwal.html">Jadwal</a>
+    </nav>
+  </header>
+  <main>
+    <form action="#" method="post">
+      <fieldset>
+        <legend>Informasi Kegiatan</legend>
+        <label for="namaKegiatan">Nama Kegiatan</label><br>
+        <input type="text" name="namaKegiatan" id="namaKegiatan" placeholder="Sepak Bola" required>
+        <br><br>
+        <label for="detailKegiatan">Detail Kegiatan</label><br>
+        <textarea name="detailKegiatan" id="detailKegiatan"></textarea><br><br>
+        <label for="lokasi">Lokasi Kegiatan</label><br>
+        <input type="text" name="lokasi" id="lokasi" placeholder="lapangan surabaya" required>
+      </fieldset>
+      <fieldset>
+        <legend>Waktu Kegiatan</legend>
+        <label for="hari">Hari</label><br>
+        <input type="date" name="hari" id="hari" required><br><br>
+        <input type="radio" name="waktu" id="pagi">
+        <label for="pagi">pagi</label>
+        <input type="radio" name="waktu" id="siang">
+        <label for="siang">Siang</label>
+        <input type="radio" name="waktu" id="sore">
+        <label for="sore">sore</label><br><br>
+        <label for="hari">Hari</label>
+        <select name="hari" id="hari" required>
+          <option value="senin">Senin</option>
+          <option value="selasa">Selasa</option>
+          <option value="rabu">Rabu</option>
+          <option value="kamis">Kamis</option>
+          <option value="jumat">Jum'at</option>
+          <option value="sabtu">Sabtu</option>
+          <option value="minggu">Minggu</option>
+        </select><br> <br>
+        <label for="jam">Jam</label><br>
+        <input type="time" name="jam" id="jam" required>
+      </fieldset>
+      <input type="checkbox" name="confirmation" id="confirmation" required>
+      <label for="confirmation">Dengan ini saya bersaksi bahwa kegiatan tersebut tidak menggangu jadwal mata kuliah dan sesuai aturan kampus</label><br>
+      <button type="submit">Kirim</button>
+      <button type="reset">Reset Form</button>
+    </form>
+  </main>
+  <footer>
+    <p>&copy; 2026 Web Informasi Kegiatan Kampus.</p>
+  </footer>
+</body>
+</html>

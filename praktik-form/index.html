@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="id">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Form Pendaftaran</title>
+    </head>
+    <body>
+        <h1>Form Pendaftaran Kegiatan</h1>
+        <form action="#" method="post">
+            <fieldset>
+                <legend>Pesan dan Persetujuan</legend>
+                <label for="alasan">Alasan mengikuti kegiatan</label><br />
+                <textarea
+                    id="alasan"
+                    name="alasan"
+                    rows="5"
+                    <!--placeholder="Tuliskan alasan Anda"-->
+                ></textarea
+                ><br /><br />
+                <label for="berkas">Bukti pendukung</label><br />
+                <input type="file" id="berkas" name="berkas" /><br /><br />
+                <label>
+                    <input type="checkbox" name="setuju" required />
+                    Saya menyetujui aturan kegiatan.
+                </label>
+            </fieldset>
+            <button type="submit">Kirim Pendaftaran</button>
+            <button type="reset">Kosongkan Form</button>
+        </form>
+    </body>
+</html>
