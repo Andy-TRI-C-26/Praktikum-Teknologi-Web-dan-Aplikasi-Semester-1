@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <title>ID vs Class</title>
+
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      padding: 20px;
+    }
+
+    /* ID selector -- hanya satu elemen di halaman ini */
+    #header {
+      background-color: #003f72;
+      color: white;
+      padding: 12px;
+    }
+
+    /* Class selector -- dipakai berulang pada tiga kartu */
+    .kartu {
+      border: 1px solid #cccccc;
+      padding: 12px;
+      margin-top: 10px;
+    }
+
+    /* Elemen boleh memiliki lebih dari satu class */
+    .kartu.penting {
+      border-color: #ed7d31;
+      background-color: #fff7f0;
+    }
+  </style>
+</head>
+
+<body>
+  <div id="header">Header Halaman (id="header")</div>
+
+  <div class="kartu">Produk A (class="kartu")</div>
+
+  <div class="kartu">Produk B (class="kartu")</div>
+
+  <div class="kartu penting">
+    Produk C -- Diskon! (class="kartu penting")
+  </div>
+</body>
+</html>

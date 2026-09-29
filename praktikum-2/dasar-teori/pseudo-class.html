@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <title>Latihan Pseudo-class</title>
+
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      padding: 20px;
+    }
+
+    button {
+      background-color: #003f72;
+      color: white;
+      padding: 10px 16px;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+
+    /* :hover -- aktif saat kursor di atas tombol */
+    button:hover {
+      background-color: #ed7d31;
+    }
+
+    /* :active -- aktif saat tombol sedang diklik */
+    button:active {
+      background-color: #003058;
+    }
+
+    input {
+      padding: 8px;
+      border: 1px solid #cccccc;
+      margin-top: 10px;
+      display: block;
+    }
+
+    /* :focus -- aktif saat input sedang dipilih */
+    input:focus {
+      outline: none;
+      border-color: #003f72;
+      background-color: #f0f6fb;
+    }
+
+    ul {
+      margin-top: 20px;
+      list-style: none;
+      padding: 0;
+    }
+
+    li {
+      padding: 6px;
+    }
+
+    /* :nth-child(2) -- hanya elemen li urutan ke-2 */
+    li:nth-child(2) {
+      background-color: #fff3cd;
+    }
+  </style>
+</head>
+
+<body>
+  <button>Arahkan Kursor ke Sini</button>
+
+  <input type="text" placeholder="Klik untuk mencoba efek focus">
+
+  <ul>
+    <li>Item pertama</li>
+    <li>Item kedua -- akan disorot</li>
+    <li>Item ketiga</li>
+  </ul>
+</body>
+</html>

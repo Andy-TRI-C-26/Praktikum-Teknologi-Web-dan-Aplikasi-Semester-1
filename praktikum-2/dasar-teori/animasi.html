@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <title>Latihan Animasi CSS</title>
+
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      padding: 30px;
+    }
+
+    /* ===== Contoh 1: transition -- butuh pemicu (hover) ===== */
+    .tombol {
+      background-color: #003f72;
+      color: white;
+      padding: 10px 20px;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+      transition: background-color 0.3s ease, transform 0.2s ease;
+    }
+
+    .tombol:hover {
+      background-color: #ed7d31;
+      transform: translateY(-3px);
+    }
+
+    /* ===== Contoh 2: animation -- berjalan otomatis ===== */
+    .kotak-animasi {
+      width: 80px;
+      height: 80px;
+      background-color: #2e7d32;
+      margin-top: 30px;
+      animation: bergerak 2s ease-in-out infinite;
+    }
+
+    @keyframes bergerak {
+      0% {
+        transform: translateX(0);
+      }
+
+      50% {
+        transform: translateX(200px);
+      }
+
+      100% {
+        transform: translateX(0);
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <button class="tombol">
+    Arahkan Kursor ke Sini (transition)
+  </button>
+
+  <div class="kotak-animasi"></div>
+</body>
+</html>

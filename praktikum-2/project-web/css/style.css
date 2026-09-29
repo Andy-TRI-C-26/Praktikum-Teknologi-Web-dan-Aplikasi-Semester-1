@@ -1,0 +1,399 @@
+/* ============ PALET WARNA ============ */
+:root {
+  --blue-slate: #555b6e;
+  --muted-teal: #89b0ae;
+  --frozen-water: #bee3db;
+  --bright-snow: #faf9f9;
+  --peach-fuzz: #ffd6ba;
+}
+
+/* ============ 1. RESET DASAR (universal selector) ============ */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "Segoe UI", Arial, sans-serif;
+  color: var(--blue-slate);
+  background-color: var(--bright-snow);
+  line-height: 1.6;
+}
+
+.container {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 0 16px;
+}
+
+/* ============ 2. HEADER (id selector) ============ */
+#header {
+  background-color: var(--blue-slate);
+  position: sticky;
+  top: 0;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px 0;
+}
+
+.logo {
+  color: var(--bright-snow);
+  font-size: 1.3rem;
+}
+
+.menu {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+}
+
+.menu a {
+  color: var(--bright-snow);
+  text-decoration: none;
+  padding: 6px 4px;
+}
+
+/* pseudo-class :hover pada menu navigasi */
+.menu a:hover {
+  color: var(--peach-fuzz);
+  border-bottom: 2px solid var(--peach-fuzz);
+}
+
+/* ============ 3. HERO SECTION ============ */
+.hero {
+  background-color: var(--frozen-water);
+  padding: 60px 0;
+  text-align: center;
+}
+
+.hero h2 {
+  font-size: 2rem;
+  margin-bottom: 12px;
+}
+
+.hero p {
+  margin-bottom: 20px;
+  color: var(--blue-slate);
+}
+
+/* ============ 4. TOMBOL (class selector + transition) ============ */
+.btn {
+  display: inline-block;
+  background-color: var(--blue-slate);
+  color: var(--bright-snow);
+  padding: 10px 20px;
+  border: none;
+  border-radius: 4px;
+  text-decoration: none;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.btn:hover {
+  background-color: var(--peach-fuzz);
+  color: var(--blue-slate);
+  transform: translateY(-2px);
+  animation: geser-btn 1s both infinite linear;
+}
+
+.btn:focus {
+  border: 5px var(--muted-teal) solid;
+}
+
+@keyframes geser-btn {
+  0% {
+    transform: translateX(5px);
+  }
+
+  100% {
+    transform: translateX(0);
+  }
+}
+
+/* ============ 5. SECTION UMUM ============ */
+.section {
+  padding: 50px 0;
+}
+
+.section h2 {
+  margin-bottom: 20px;
+  color: var(--blue-slate);
+}
+
+/* ============ 6. GRID KARTU + ANIMASI ============ */
+.grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+}
+
+.kartu {
+  background-color: var(--bright-snow);
+  border: 1px solid var(--muted-teal);
+  border-radius: 6px;
+  padding: 20px;
+  flex: 1 1 30%;
+  animation: muncul 0.6s ease-in-out;
+}
+
+.kartu:hover {
+  transform: scale(1.02);
+  border-color: var(--blue-slate);
+  background-color: var(--frozen-water);
+  transition: .3s ease-in-out;
+}
+
+.kartu h3 {
+  color: var(--blue-slate);
+  margin-bottom: 8px;
+}
+
+/* aturan @keyframes untuk animasi kartu */
+@keyframes muncul {
+  from {
+    opacity: 0;
+    transform: translateY(15px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* ============ 7. FORM (pseudo-class :focus) ============ */
+.form-group {
+  margin-bottom: 16px;
+}
+
+label {
+  display: block;
+  margin-bottom: 6px;
+  font-weight: bold;
+}
+
+input,
+textarea {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid var(--muted-teal);
+  border-radius: 4px;
+  font-family: inherit;
+  color: var(--blue-slate);
+  background-color: var(--bright-snow);
+}
+
+input:focus,
+textarea:focus {
+  outline: none;
+  border-color: var(--blue-slate);
+  box-shadow: 0 0 0 3px var(--frozen-water);
+}
+
+/* ============ 8. FOOTER ============ */
+footer {
+  background-color: var(--blue-slate);
+  color: var(--frozen-water);
+  text-align: center;
+  padding: 16px 0;
+}
+
+#footer-utama {
+  color: var(--peach-fuzz);
+}
+
+/* ============ 9. RESPONSIVE WEB DESIGN ============ */
+@media (max-width: 1024px) {
+  .grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(100px, 512px));
+  }
+}
+
+@media (max-width: 768px) {
+  .kartu {
+    flex: 1 1 45%;
+  }
+}
+
+@media (max-width: 480px) {
+  .navbar {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .menu {
+    flex-direction: column;
+    text-align: center;
+    gap: 8px;
+  }
+
+  .kartu {
+    flex: 1 1 100%;
+  }
+}
+
+/* ===== RIWAYAT PENDIDIKAN ===== */
+#pendidikan {
+  padding: 4rem 1.25rem;
+  background: var(--bright-snow);
+  color: var(--blue-slate);
+  line-height: 1.6;
+}
+
+#pendidikan .judul {
+  margin: 0 0 .5rem;
+  font-size: clamp(1.75rem, 4vw, 2.5rem);
+  line-height: 1.2;
+  color: var(--blue-slate);
+}
+
+#pendidikan .intro {
+  margin: 0 0 3rem;
+  max-width: 55ch;
+  opacity: .85;
+}
+
+#pendidikan .timeline {
+  list-style: none;
+  margin: 0;
+  padding: 0 0 0 2rem;
+  position: relative;
+}
+
+#pendidikan .timeline::before {
+  content: "";
+  position: absolute;
+  left: 7px;
+  top: .5rem;
+  bottom: .5rem;
+  width: 2px;
+  background: var(--muted-teal);
+}
+
+#pendidikan .item {
+  position: relative;
+  margin-bottom: 2rem;
+}
+
+#pendidikan .timeline .item:nth-child(1) {
+  animation: animasi-section-pendidikan-item .6s ease-out;
+}
+
+#pendidikan .timeline .item:nth-child(2) {
+  animation: animasi-section-pendidikan-item .6s ease-out .3s;
+}
+
+#pendidikan .timeline .item:nth-child(3) {
+  animation: animasi-section-pendidikan-item .6s ease-out .6s;
+}
+
+#pendidikan .timeline .item:nth-child(1)::before {
+  animation: animasi-section-pendidikan-item-before .6s ease-out .6s;
+}
+
+#pendidikan .timeline .item:nth-child(2)::before {
+  animation: animasi-section-pendidikan-item-before .6s ease-out .9s;
+}
+
+#pendidikan .timeline .item:nth-child(3)::before {
+  animation: animasi-section-pendidikan-item-before .6s ease-out 1.2s;
+}
+
+#pendidikan .item:last-child {
+  margin-bottom: 0;
+}
+
+#pendidikan .item::before {
+  content: "";
+  position: absolute;
+  left: -2rem;
+  top: 1.35rem;
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  background: var(--muted-teal);
+}
+
+/* Card */
+#pendidikan .kartu {
+  background: #fff;
+  border: 1px solid var(--frozen-water);
+  border-left: 5px solid var(--muted-teal);
+  border-radius: 10px;
+  padding: 1.25rem 1.5rem;
+}
+
+#pendidikan .periode {
+  display: inline-block;
+  margin-bottom: .6rem;
+  border-radius: 999px;
+  color: var(--blue-slate);
+  font-size: .85rem;
+  font-weight: 600;
+}
+
+#pendidikan .gelar {
+  margin: 0;
+  font-size: 1.2rem;
+  color: var(--blue-slate);
+}
+
+#pendidikan .nama-sekolah {
+  margin: .15rem 0 .75rem;
+  font-weight: 600;
+  color: var(--muted-teal);
+}
+
+#pendidikan .tag {
+  display: flex;
+  flex-wrap: wrap;
+  gap: .5rem;
+  margin: 1rem 0 0;
+  padding: 0;
+  list-style: none;
+}
+
+#pendidikan .tag li {
+  padding: .2rem .7rem;
+  border-radius: 6px;
+  background: var(--frozen-water);
+  color: var(--blue-slate);
+  font-size: .8rem;
+}
+
+#pendidikan :focus-visible {
+  outline: 3px solid var(--muted-teal);
+  outline-offset: 3px;
+}
+
+@keyframes animasi-section-pendidikan-item {
+  0% {
+    transform: translateX(100px);
+    opacity: 0;
+  }
+
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+@keyframes animasi-section-pendidikan-item-before {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}

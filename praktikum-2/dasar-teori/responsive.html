@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Latihan Responsive Web Design</title>
+
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+      padding: 20px;
+    }
+
+    .kontainer {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+    }
+
+    .kartu {
+      background-color: #f2f6fa;
+      border: 1px solid #cccccc;
+      padding: 16px;
+      width: 30%;
+    }
+
+    /* Berlaku hanya jika lebar layar maksimal 768px (tablet ke bawah) */
+    @media (max-width: 768px) {
+      .kartu {
+        width: 45%;
+      }
+    }
+
+    /* Berlaku hanya jika lebar layar maksimal 480px (ponsel) */
+    @media (max-width: 480px) {
+      .kartu {
+        width: 100%;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <h1>Kartu Responsif</h1>
+
+  <div class="kontainer">
+    <div class="kartu">Kartu 1</div>
+    <div class="kartu">Kartu 2</div>
+    <div class="kartu">Kartu 3</div>
+  </div>
+</body>
+</html>

@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Profil - Andy Satria Budi Utomo</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+  <header id="header">
+    <div class="container header-inner">
+      <h1 class="logo">ANDY</h1>
+      <nav>
+        <ul class="nav-list">
+          <li><a href="#beranda">Beranda</a></li>
+          <li><a href="#tentang">Tentang Saya</a></li>
+          <li><a href="#keahlian">Keahlian</a></li>
+          <li><a href="#kontak">Kontak</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+
+    <section id="beranda" class="section hero">
+      <div class="container hero-inner">
+        <img class="foto" src="images/Angjay.webp" alt="Foto profil gwejh">
+        <div class="hero-text">
+          <p>Halo, saya</p>
+          <h2>Andy Satria Budi Utomo</h2>
+          <p class="subtitle">Mahasiswa PENS Program Studi Teknologi Rekayasa Internet</p>
+          <a href="#kontak" class="btn">Hubungi Saya</a>
+          <a href="#tentang" class="btn btn-outline">Kenal Lebih Dekat</a>
+        </div>
+      </div>
+    </section>
+
+    <section id="tentang" class="section">
+      <div class="container">
+        <h2 class="section-title">Tentang Saya</h2>
+        <p class="about-text">
+          Berawal sebagai siswa yang penasaran dengan cara kerja sesuatu, saya berkembang menjadi pengembang yang menjembatani dunia digital dan fisik. Keahlian saya mencakup pembuatan aplikasi web responsif hingga merancang ekosistem IoT yang menyelesaikan masalah nyata.
+        </p>
+
+        <div class="card-grid">
+          <div class="card">
+            <h3>Pendidikan</h3>
+            <p>Politeknik Elektronika Negeri Surabaya</p>
+            <p>Teknologi Rekaya Internet, 2026 - Sekarang</p>
+          </div>
+          <div class="card">
+            <h3>Minat</h3>
+            <p>Segala tentang programing</p>
+          </div>
+          <div class="card">
+            <h3>Pengalaman</h3>
+            <p>Magang diperusahaan CV. Gitech Indonesia</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="keahlian" class="section section-alt">
+      <div class="container">
+        <h2 class="section-title">Keahlian</h2>
+
+        <ul class="skill-list">
+          <li class="skill-item">
+            <span class="skill-name">HTML</span>
+            <div class="skill-bar">
+              <div class="skill-fill level-90"></div>
+            </div>
+          </li>
+          <li class="skill-item">
+            <span class="skill-name">CSS</span>
+            <div class="skill-bar">
+              <div class="skill-fill level-80"></div>
+            </div>
+          </li>
+          <li class="skill-item">
+            <span class="skill-name">JavaScript</span>
+            <div class="skill-bar">
+              <div class="skill-fill level-70"></div>
+            </div>
+          </li>
+          <li class="skill-item">
+            <span class="skill-name">TypeScript</span>
+            <div class="skill-bar">
+              <div class="skill-fill level-70"></div>
+            </div>
+          </li>
+          <li class="skill-item">
+            <span class="skill-name">PHP</span>
+            <div class="skill-bar">
+              <div class="skill-fill level-60"></div>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <section id="kontak" class="section">
+      <div class="container">
+        <h2 class="section-title">Kontak</h2>
+
+        <p>Email: asbuAja@proton.me</p>
+        <p>Telepon: +62 823-3550-2468</p>
+
+        <form class="contact-form" action="!@#" method="post">
+          <label for="nama">Nama</label>
+          <input type="text" id="nama" name="nama" placeholder="Nama Anda" required>
+
+          <label for="email">Email</label>
+          <input type="email" id="email" name="email" placeholder="email@contoh.com" required>
+
+          <label for="pesan">Pesan</label>
+          <textarea id="pesan" name="pesan" rows="5" placeholder="Tulis pesan Anda" required></textarea>
+
+          <button type="submit" class="btn">Kirim Pesan</button>
+        </form>
+      </div>
+    </section>
+
+  </main>
+
+  <footer>
+    <p>&copy; 2026 - Andy Satria Budi Utomo</p>
+  </footer>
+
+</body>
+
+</html>

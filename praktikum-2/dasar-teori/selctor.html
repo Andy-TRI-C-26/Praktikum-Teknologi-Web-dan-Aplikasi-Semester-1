@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <title>Latihan Selector</title>
+
+  <style>
+    /* 1. Universal selector -- berlaku untuk semua elemen */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+      padding: 20px;
+    }
+
+    /* 2. Element selector -- semua <p> */
+    p {
+      color: #333333;
+      margin-bottom: 10px;
+    }
+
+    /* 3. Group selector -- h1 dan h2 sekaligus */
+    h1,
+    h2 {
+      color: #003f72;
+      font-family: Georgia, serif;
+    }
+
+    /* 4. Class selector -- elemen dengan class="sorot" */
+    .sorot {
+      background-color: #fff3cd;
+      padding: 4px;
+    }
+
+    /* 5. ID selector -- hanya elemen dengan id="judul-utama" */
+    #judul-utama {
+      text-decoration: underline;
+    }
+  </style>
+</head>
+
+<body>
+  <h1 id="judul-utama">Judul Utama Halaman</h1>
+
+  <h2>Sub Judul</h2>
+
+  <p>
+    Paragraf biasa, hanya terkena element selector
+    <code>p</code>.
+  </p>
+
+  <p class="sorot">
+    Paragraf ini punya class "sorot" sehingga latar belakangnya kuning.
+  </p>
+</body>
+</html>
