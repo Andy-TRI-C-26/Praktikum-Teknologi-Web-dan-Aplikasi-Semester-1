@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Profil Praktikum - Andy</title>
+  <link rel="stylesheet" href="css/style.css">
+  <style>
+    #tentang h2 {
+      font-size: 2rem;
+      border-bottom: 3px solid var(--muted-teal);
+      border-radius: 999px;
+      margin-left: auto;
+      margin-right: auto;
+      padding: 5px 15px 5px 15px;
+      width: fit-content;
+    }
+
+  </style>
+</head>
+
+<body>
+
+  <header id="header">
+    <div class="container navbar">
+      <h1 class="logo">Andy</h1>
+
+      <nav>
+        <ul class="menu">
+          <li><a href="#beranda">Beranda</a></li>
+          <li><a href="#tentang">Tentang</a></li>
+          <li><a href="#keahlian">Keahlian</a></li>
+          <li><a href="#kontak">Kontak</a></li>
+        </ul>
+      </nav>
+      <!-- BARU : tombol sakelar tema -->
+      <button id="tombol-tema" class="btn-tema" type="button">Mode Gelap</button>
+    </div>
+  </header>
+
+  <section id="beranda" class="hero">
+    <div class="container">
+      <h2>Selamat Datang di Halaman Profil Saya</h2>
+      <p>
+        Mahasiswa Program Studi Sarjana Terapan Teknologi Rekayasa
+        Internet, PENS.
+      </p>
+      <a href="#kontak" class="btn">Hubungi Saya</a>
+    </div>
+  </section>
+
+  <section id="tentang" class="section">
+    <div class="container">
+      <h2>Tentang Saya</h2>
+      <!-- BARU : tempat salam otomatis -->
+      <p id="salam" class="salam"></p>
+      <p>
+        Saya Andy dari mahasiswa PENS (Politeknik Elektronika Negeri Surabaya) program studi TRI (Teknologi Rekayasa Internet) kelas C
+      </p>
+      <p style="border: 1px solid var(--muted-teal); border-radius: 15px; padding: 10px; margin-left: -11px;">
+        Saya suka dengan coding karena itu menyenangkan.
+      </p>
+    </div>
+  </section>
+
+  <section id="keahlian" class="section">
+    <div class="container">
+      <h2>Keahlian</h2>
+
+      <div class="grid">
+        <div class="kartu">
+          <h3>HTML</h3>
+          <p>Menyusun struktur dan konten halaman web.</p>
+        </div>
+
+        <div class="kartu">
+          <h3>CSS</h3>
+          <p>Mengatur tampilan, tata letak, dan animasi halaman web.</p>
+        </div>
+
+        <div class="kartu">
+          <h3>Responsive Design</h3>
+          <p>
+            Membuat halaman nyaman digunakan di berbagai ukuran
+            layar.
+          </p>
+        </div>
+
+        <div class="kartu">
+          <h3>JavaScript</h3>
+          <p>
+            memberikan interaksi kehalaman web
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="pendidikan" class="section">
+    <div class="container">
+
+      <h2 class="judul">Riwayat Pendidikan</h2>
+      <p class="intro">Perjalanan belajar saya dari sekolah menengah hingga perguruan tinggi.</p>
+
+      <ol class="timeline">
+
+        <li class="item">
+          <article class="kartu-pendidikan">
+            <span class="periode">2022 - 2026</span>
+            <h3 class="gelar">SMK</h3>
+            <p class="nama-sekolah">SMK Negeri 1 Dlanggu</p>
+          </article>
+        </li>
+
+        <li class="item">
+          <article class="kartu-pendidikan">
+            <span class="periode">2019 – 2022</span>
+            <h3 class="gelar">SMP</h3>
+            <p class="nama-sekolah">SMP Negeri 1 Puri</p>
+          </article>
+        </li>
+
+        <li class="item">
+          <article class="kartu-pendidikan">
+            <span class="periode">2013 – 2019</span>
+            <h3 class="gelar">MI</h3>
+            <p class="nama-sekolah">MI Nurul Huda</p>
+          </article>
+        </li>
+
+      </ol>
+    </div>
+  </section>
+
+  <section id="kontak" class="section">
+    <div class="container">
+      <h2>Hubungi Saya</h2>
+
+      <!-- BARU : id form , novalidate , tempat pesan error dan status -->
+      <form id="form-kontak" novalidate>
+        <div class="form-group">
+          <label for="nama">Nama</label>
+          <input type="text" id="nama" name="nama" placeholder="Tuliskan nama Anda">
+          <span class="error-msg" id="error-nama"></span>
+        </div>
+        <div class="form-group">
+          <label for="pesan">Pesan</label>
+          <textarea id="pesan" name="pesan" rows="4" placeholder="Tuliskan pesan Anda"></textarea>
+          <span class="error-msg" id="error-pesan"></span>
+        </div>
+        <button type="submit" class="btn">Kirim Pesan</button>
+        <p id="status-form" class="status-form"></p>
+      </form>
+    </div>
+  </section>
+
+  <footer id="footer-utama">
+    <div class="container">
+      <p>
+        &copy; 2026 Andy -- Praktikum Workshop Teknologi Web
+        dan Aplikasi.
+      </p>
+    </div>
+  </footer>
+
+  <!-- BARU : tombol kembali ke atas -->
+  <button id="btn-top" class="btn-top" type="button" aria-label="Kembali ke atas">&uarr;</button>
+  <!-- BARU : JavaScript dimuat paling akhir -->
+  <script src="js/script.js"></script>
+
+</body>
+
+</html>

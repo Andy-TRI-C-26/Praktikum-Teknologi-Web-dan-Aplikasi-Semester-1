@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+  <meta charset="UTF -8">
+  <title> Latihan Event </title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      padding: 20px;
+    }
+
+    button {
+      padding: 8px 14px;
+      cursor: pointer;
+    }
+
+    #lampu {
+      width: 180px;
+      padding: 20px;
+      margin: 10px 0;
+      text-align: center;
+      font-weight: bold;
+      background-color: #444444;
+      color: #ffffff;
+    }
+
+    #lampu.menyala {
+      background-color: #ffeb3b;
+      color: #333333;
+    }
+
+  </style>
+</head>
+
+<body>
+  <h2> Kasus 1: Penghitung Klik </h2>
+  <button id="btnTambah"> Tambah </button>
+  <button id="btnReset"> Reset </button>
+  <p> Jumlah klik : <span id="angka">0 </span></p>
+  <h2> Kasus 2: Lampu Pintar </h2>
+  <button id="btnLampu"> Sakelar </button>
+  <div id="lampu"> Lampu MATI </div>
+  <h2> Kasus 3: Sapaan Langsung ( event input ) </h2>
+  <input type="text" id="inputNama" placeholder="Ketik nama Anda">
+  <p id="sapaan">Halo, tamu </ p>
+  <h2> Kasus 4: Kalkulator Suhu </h2>
+  <input type="number" id="inputSuhu" placeholder="Suhu Celsius">
+  <button id="btnHitung"> Konversi </button>
+  <p id="hasilSuhu"></p>
+  <script>
+    // ----- Kasus 1 -----
+    let hitung = 0;
+    const angka = document.getElementById("angka");
+    document.getElementById("btnTambah").addEventListener("click", function () {
+      hitung = hitung + 1;
+      angka.innerText = hitung;
+    });
+    document.getElementById("btnReset").addEventListener("click", function () {
+      hitung = 0;
+      angka.innerText = hitung;
+    });
+    // ----- Kasus 2 -----
+    const lampu = document.getElementById("lampu");
+    document.getElementById("btnLampu").addEventListener("click", function () {
+      lampu.classList.toggle("menyala");
+      if (lampu.classList.contains("menyala")) {
+        lampu.innerText = "Lampu NYALA";
+      } else {
+        lampu.innerText = "Lampu MATI";
+      }
+    });
+    // ----- Kasus 3 -----
+    const inputNama = document.getElementById("inputNama");
+    const sapaan = document.getElementById("sapaan");
+    inputNama.addEventListener("input", function () {
+      const isi = inputNama.value;
+      if (isi === "") {
+        sapaan.innerText = "Halo , tamu!";
+      } else {
+        sapaan.innerText = "Halo, " + isi + "!";
+      }
+    });
+    // ----- Kasus 4 -----
+    document.getElementById("btnHitung").addEventListener("click", function () {
+      const celsius = Number(document.getElementById("inputSuhu").value);
+      const fahrenheit = celsius * 9 / 5 + 32;
+      document.getElementById("hasilSuhu").innerText =
+        celsius + "derajat C = " + fahrenheit + "derajat F";
+    });
+
+  </script>
+</body>
+
+</html>

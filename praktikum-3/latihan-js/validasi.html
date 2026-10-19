@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+  <meta charset="UTF -8">
+  <title> Latihan Validasi Form </title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      padding: 20px;
+      max-width: 420px;
+    }
+
+    .grup {
+      margin-bottom: 14px;
+    }
+
+    label {
+      display: block;
+      font-weight: bold;
+      margin-bottom: 4px;
+    }
+
+    input {
+      width: 100%;
+      padding: 8px;
+      border: 1px solid #cccccc;
+    }
+
+    input.is-invalid {
+      border-color: #c62828;
+      background-color: #fdecec;
+    }
+
+    .error-msg {
+      display: block;
+      color: #c62828;
+      font-size: 0.85 rem;
+      margin-top: 4px;
+    }
+
+    .sukses {
+      color: #2 e7d32;
+      font-weight: bold;
+    }
+
+    button {
+      padding: 8px 16px;
+      cursor: pointer;
+    }
+
+  </style>
+</head>
+
+<body>
+  <h2> Pendaftaran Akun </h2>
+  <form id="formDaftar" novalidate>
+    <div class="grup">
+      <label for="nama"> Nama ( min.3 huruf ) </label>
+      <input type="text" id="nama">
+      <span class="error-msg" id="errNama"> </span>
+    </div>
+    <div class="grup">
+      <label for="email"> Email </label>
+      <input type="text" id="email">
+      <span class="error-msg" id="errEmail"> </span>
+    </div>
+    <div class="grup">
+      <label for="sandi"> Kata sandi ( min.6 karakter ) </label>
+      <input type="password" id="sandi">
+      <span class="error-msg" id="errSandi"> </span>
+    </div>
+    <button type="submit"> Daftar </button>
+  </form>
+  <p id="hasil" class="sukses">
+  </p>
+  <script>
+    const form = document.getElementById("formDaftar");
+    const inputNama = document.getElementById("nama");
+    const inputEmail = document.getElementById("email");
+    const inputSandi = document.getElementById("sandi");
+    const errNama = document.getElementById("errNama");
+    const errEmail = document.getElementById("errEmail");
+    const errSandi = document.getElementById("errSandi");
+    const hasil = document.getElementById("hasil");
+
+    function tampilError(input, tempatPesan, teks) {
+      input.classList.add("is-invalid");
+      tempatPesan.innerText = teks;
+    }
+
+    function bersihkanError(input, tempatPesan) {
+      input.classList.remove("is-invalid");
+      tempatPesan.innerText = "";
+    }
+    form.addEventListener("submit", function (event) {
+      event.preventDefault();
+      // tahan dulu pengiriman bawaan
+      let semuaBenar = true;
+      // Aturan 1: nama
+      const nama = inputNama.value.trim();
+      if (nama === "") {
+        tampilError(inputNama, errNama, "Nama wajib diisi.");
+        semuaBenar = false;
+      } else if (nama.length < 3) {
+        tampilError(inputNama, errNama, "Nama minimal 3 karakter.");
+        semuaBenar = false;
+      } else {
+        bersihkanError(inputNama, errNama);
+      }
+      // Aturan 2: email
+      const email = inputEmail.value.trim();
+      if (email === "") {
+        tampilError(inputEmail, errEmail, "Email wajib diisi.");
+        semuaBenar = false;
+      } else if (email.includes("@") === false || email.includes(".") === false) {
+        tampilError(inputEmail, errEmail, "Format email tidak valid.");
+        semuaBenar = false;
+      } else {
+        bersihkanError(inputEmail, errEmail);
+      }
+      // Aturan 3: kata sandi
+      const sandi = inputSandi.value;
+      if (sandi.length < 6) {
+        tampilError(inputSandi, errSandi, "Kata sandi minimal 6 karakter.");
+        semuaBenar = false;
+      } else {
+        bersihkanError(inputSandi, errSandi);
+      }
+      // Hasil akhir
+      if (semuaBenar === true) {
+        hasil.innerText = "Pendaftaran berhasil.Selamat datang ," + nama + "!";
+      } else {
+        hasil.innerText = "";
+      }
+    });
+
+  </script>
+</body>
+
+</html>

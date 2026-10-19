@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+  <meta charset="UTF -8">
+  <title> Latihan BOM </title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      padding: 20px;
+    }
+
+    .panel {
+      position: fixed;
+      top: 10px;
+      right: 10px;
+      background-color: #003 f72;
+      color: white;
+      padding: 8px 12px;
+    }
+
+    .pengisi {
+      height: 1500px;
+      background-color: #f2f6fa;
+      margin-top: 10px;
+    }
+
+  </style>
+</head>
+
+<body>
+  <div class="panel" id="panelScroll"> Posisi scroll: 0 px </div>
+  <h2> Kasus 1: Konfirmasi Hapus </h2>
+  <button id="btnHapus"> Hapus Data </button>
+  <p id="statusHapus"> Data masih ada.</p>
+  <h2> Kasus 2: Tautan yang Dicegah </h2>
+  <a href="https://example.com" id="tautanPalsu"> Klik saya ( tidak akan pindah halaman )</a>
+  <h2> Kasus 3: Posisi Scroll </h2>
+  <p> Gulir halaman ke bawah dan perhatikan angka di pojok kanan atas.</p>
+  <div class="pengisi"> Area panjang agar halaman bisa digulir.</div>
+  <script>
+    //----- Kasus 1 -----
+    const statusHapus = document.getElementById("statusHapus");
+    document.getElementById("btnHapus").addEventListener("click", function () {
+      const yakin = confirm("Yakin ingin menghapus data?");
+      if (yakin === true) {
+        statusHapus.innerText = "Data berhasil dihapus.";
+      } else {
+        statusHapus.innerText = "Penghapusan dibatalkan.";
+      }
+    });
+    //----- Kasus 2 -----
+    document.getElementById("tautanPalsu").addEventListener("click", function (
+      event) {
+      event.preventDefault();
+      alert("Perilaku bawaan tautan dibatalkan oleh preventDefault ().");
+    });
+    //----- Kasus 3 -----
+    const panel = document.getElementById("panelScroll");
+    window.addEventListener("scroll", function () {
+      panel.innerText = "Posisi scroll: " + Math.round(window.scrollY) + "px";
+    });
+
+  </script>
+</body>
+
+</html>

@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+  <meta charset="UTF-8">
+  <title> Latihan DOM </title>
+  <style>
+    body {
+      font-family: Arial, sans - serif;
+      padding: 20 px;
+    }
+
+    .kotak {
+      padding: 14 px;
+      border: 2 px solid # cccccc;
+      margin: 12 px 0;
+    }
+
+    .sorot {
+      background-color: # fff3cd;
+      border-color: # ed7d31;
+    }
+
+  </style>
+</head>
+
+<body>
+  <h1 id="judul"> Judul Awal </h1>
+  <p class="info"> Paragraf ini akan diubah warnanya oleh JavaScript . </ p>
+  <div class="kotak"> Kotak ini akan diberi class sorot . </div>
+  <p id="pakaiText"></p>
+  <p id="pakaiHTML"></p>
+  <a id="tautan" href="#"> Tautan Awal </a>
+  <script>
+    // 1. Memilih elemen
+    const judul = document.getElementById("judul")
+    const info = document.querySelector(".info");
+    const kotak = document.querySelector(".kotak");
+
+    // 2. Mengubah teks
+    judul.innerText = "Judul Sudah Diubah JavaScript";
+    // 3. Mengubah gaya
+    info.style.color = "green";
+    // 4. Menambah class
+    kotak.classList.add("sorot");
+    // 5. innerText lawan innerHTML
+    document.getElementById("pakaiText").innerText =
+      "<b>Tebal</b> (innerText:tag tampil apa adanya)";
+    document.getElementById("pakaiHTML").innerHTML =
+      "<b>Tebal</b> (innerHTML:tag benar-benar jadi tebal)";
+    // 6. Mengubah atribut
+    const tautan = document.querySelector("#tautan");
+    tautan.setAttribute("href", "https://www.pens.ac.id");
+    tautan.innerText = "Kunjungi Website PENS";
+
+  </script>
+</body>
+
+</html>
