@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Profil - Andy Satria Budi Utomo</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+  <header id="header">
+    <div class="container header-inner">
+      <h1 class="logo">ANDY</h1>
+
+      <!-- Jam digital: diperbarui tiap detik oleh script.js -->
+      <span id="jam" class="jam" aria-label="Jam saat ini">--:--:--</span>
+
+      <!-- Tombol hamburger: hanya tampil di layar kecil (lihat style.css) -->
+      <button id="menu-toggle" class="menu-toggle" type="button"
+        aria-label="Buka menu" aria-expanded="false" aria-controls="menu-utama">
+        <span></span><span></span><span></span>
+      </button>
+
+      <nav id="menu-utama">
+        <ul class="nav-list">
+          <li><a href="#beranda">Beranda</a></li>
+          <li><a href="#tentang">Tentang Saya</a></li>
+          <li><a href="#keahlian">Keahlian</a></li>
+          <li><a href="#proyek">Proyek</a></li>
+          <li><a href="#interaktif">Interaktif</a></li>
+          <li><a href="#kontak">Kontak</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+
+    <section id="beranda" class="section hero">
+      <div class="container hero-inner">
+        <img class="foto" src="images/Angjay.webp" alt="Foto profil gwejh">
+        <div class="hero-text">
+          <p>Halo, saya</p>
+          <h2>Andy Satria Budi Utomo</h2>
+          <p class="subtitle">Mahasiswa PENS Program Studi Teknologi Rekayasa Internet</p>
+          <a href="#kontak" class="btn">Hubungi Saya</a>
+          <a href="#tentang" class="btn btn-outline">Kenal Lebih Dekat</a>
+        </div>
+      </div>
+    </section>
+
+    <section id="tentang" class="section">
+      <div class="container">
+        <h2 class="section-title">Tentang Saya</h2>
+        <p class="about-text">
+          Berawal sebagai siswa yang penasaran dengan cara kerja sesuatu, saya berkembang menjadi pengembang yang menjembatani dunia digital dan fisik. Keahlian saya mencakup pembuatan aplikasi web responsif hingga merancang ekosistem IoT yang menyelesaikan masalah nyata.
+        </p>
+
+        <div class="card-grid">
+          <div class="card">
+            <h3>Pendidikan</h3>
+            <p>Politeknik Elektronika Negeri Surabaya</p>
+            <p>Teknologi Rekaya Internet, 2026 - Sekarang</p>
+          </div>
+          <div class="card">
+            <h3>Minat</h3>
+            <p>Segala tentang programing</p>
+          </div>
+          <div class="card">
+            <h3>Pengalaman</h3>
+            <p>Magang diperusahaan CV. Gitech Indonesia</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="keahlian" class="section section-alt">
+      <div class="container">
+        <h2 class="section-title">Keahlian</h2>
+
+        <ul class="skill-list">
+          <li class="skill-item">
+            <span class="skill-name">HTML</span>
+            <div class="skill-bar">
+              <div class="skill-fill level-90"></div>
+            </div>
+          </li>
+          <li class="skill-item">
+            <span class="skill-name">CSS</span>
+            <div class="skill-bar">
+              <div class="skill-fill level-80"></div>
+            </div>
+          </li>
+          <li class="skill-item">
+            <span class="skill-name">JavaScript</span>
+            <div class="skill-bar">
+              <div class="skill-fill level-70"></div>
+            </div>
+          </li>
+          <li class="skill-item">
+            <span class="skill-name">TypeScript</span>
+            <div class="skill-bar">
+              <div class="skill-fill level-70"></div>
+            </div>
+          </li>
+          <li class="skill-item">
+            <span class="skill-name">PHP</span>
+            <div class="skill-bar">
+              <div class="skill-fill level-60"></div>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- Proyek: kartu difilter lewat atribut data-kategori -->
+    <section id="proyek" class="section">
+      <div class="container">
+        <h2 class="section-title">Proyek</h2>
+
+        <div class="filter-bar">
+          <button type="button" class="filter-btn aktif" data-filter="semua" aria-pressed="true">Semua</button>
+          <button type="button" class="filter-btn" data-filter="web" aria-pressed="false">Web</button>
+          <button type="button" class="filter-btn" data-filter="iot" aria-pressed="false">IoT</button>
+          <button type="button" class="filter-btn" data-filter="aplikasi" aria-pressed="false">Aplikasi</button>
+        </div>
+
+        <!-- Isi proyek di bawah hanyalah contoh, silakan ganti dengan proyek asli -->
+        <div class="card-grid">
+          <div class="card proyek-card" data-kategori="web">
+            <h3>Website Profil Pribadi</h3>
+            <p>Halaman profil responsif dengan HTML, CSS, dan JavaScript.</p>
+            <span class="tag">Web</span>
+          </div>
+          <div class="card proyek-card" data-kategori="web">
+            <h3>Sistem Informasi Sederhana</h3>
+            <p>Aplikasi web berbasis PHP untuk mengelola data.</p>
+            <span class="tag">Web</span>
+          </div>
+          <div class="card proyek-card" data-kategori="web">
+            <h3>Dashboard Statistik</h3>
+            <p>Dashboard visualisasi data menggunakan TypeScript.</p>
+            <span class="tag">Web</span>
+          </div>
+          <div class="card proyek-card" data-kategori="iot">
+            <h3>Monitoring Suhu Ruangan</h3>
+            <p>Sensor suhu yang datanya tampil secara langsung di web.</p>
+            <span class="tag">IoT</span>
+          </div>
+          <div class="card proyek-card" data-kategori="iot">
+            <h3>Lampu Pintar Otomatis</h3>
+            <p>Pengendali lampu berbasis mikrokontroler dan sensor cahaya.</p>
+            <span class="tag">IoT</span>
+          </div>
+          <div class="card proyek-card" data-kategori="aplikasi">
+            <h3>Aplikasi To-Do List</h3>
+            <p>Pencatat tugas harian yang berjalan di browser.</p>
+            <span class="tag">Aplikasi</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Interaktif: kuis mini & kalkulator IPK (konten dibangun oleh script.js) -->
+    <section id="interaktif" class="section section-alt">
+      <div class="container">
+        <h2 class="section-title">Interaktif</h2>
+
+        <div class="panel-grid">
+          <div class="panel" id="kuis">
+            <h3>Kuis Mini</h3>
+            <p id="kuis-progres" class="kuis-progres"></p>
+            <p id="kuis-soal" class="kuis-soal"></p>
+            <div id="kuis-opsi" class="kuis-opsi"></div>
+            <p id="kuis-umpanbalik" aria-live="polite"></p>
+            <button id="kuis-lanjut" class="btn" type="button" hidden>Lanjut</button>
+          </div>
+
+          <div class="panel" id="ipk">
+            <h3>Kalkulator IPK</h3>
+            <div class="ipk-baris ipk-judul">
+              <span>SKS</span><span>Nilai (0-4)</span><span></span>
+            </div>
+            <div id="ipk-daftar"></div>
+            <div class="ipk-aksi">
+              <button id="ipk-tambah" class="btn btn-outline" type="button">+ Mata Kuliah</button>
+              <button id="ipk-hitung" class="btn" type="button">Hitung IPK</button>
+            </div>
+            <p id="ipk-hasil" class="ipk-hasil" aria-live="polite"></p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="kontak" class="section">
+      <div class="container">
+        <h2 class="section-title">Kontak</h2>
+
+        <p>Email: asbuAja@proton.me</p>
+        <p>Telepon: +62 823-3550-2468</p>
+
+        <form class="contact-form" action="!@#" method="post">
+          <label for="nama">Nama</label>
+          <input type="text" id="nama" name="nama" placeholder="Nama Anda" required>
+
+          <label for="email">Email</label>
+          <input type="email" id="email" name="email" placeholder="email@contoh.com" required>
+
+          <label for="pesan">Pesan</label>
+          <textarea id="pesan" name="pesan" rows="5" placeholder="Tulis pesan Anda" required></textarea>
+
+          <button type="submit" class="btn">Kirim Pesan</button>
+        </form>
+      </div>
+    </section>
+
+  </main>
+
+  <footer>
+    <p>&copy; 2026 - Andy Satria Budi Utomo</p>
+    <!-- Penghitung kunjungan per sesi (diisi oleh script.js) -->
+    <p class="pengunjung">Kunjungan pada sesi ini: <span id="jumlah-pengunjung">0</span></p>
+  </footer>
+
+  <script src="script.js"></script>
+
+</body>
+
+</html>

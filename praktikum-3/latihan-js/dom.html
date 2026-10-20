@@ -6,19 +6,19 @@
   <title> Latihan DOM </title>
   <style>
     body {
-      font-family: Arial, sans - serif;
-      padding: 20 px;
+      font-family: Arial, sans-serif;
+      padding: 20px;
     }
 
     .kotak {
-      padding: 14 px;
-      border: 2 px solid # cccccc;
-      margin: 12 px 0;
+      padding: 14px;
+      border: 2px solid #cccccc;
+      margin: 12px 0;
     }
 
     .sorot {
-      background-color: # fff3cd;
-      border-color: # ed7d31;
+      background-color: #fff3cd;
+      border-color: #ed7d31;
     }
 
   </style>
@@ -44,10 +44,8 @@
     // 4. Menambah class
     kotak.classList.add("sorot");
     // 5. innerText lawan innerHTML
-    document.getElementById("pakaiText").innerText =
-      "<b>Tebal</b> (innerText:tag tampil apa adanya)";
-    document.getElementById("pakaiHTML").innerHTML =
-      "<b>Tebal</b> (innerHTML:tag benar-benar jadi tebal)";
+    document.getElementById("pakaiText").innerText = "<b>Tebal</b> (innerText:tag tampil apa adanya)";
+    document.getElementById("pakaiHTML").innerHTML = "<b>Tebal</b> (innerHTML:tag benar-benar jadi tebal)";
     // 6. Mengubah atribut
     const tautan = document.querySelector("#tautan");
     tautan.setAttribute("href", "https://www.pens.ac.id");

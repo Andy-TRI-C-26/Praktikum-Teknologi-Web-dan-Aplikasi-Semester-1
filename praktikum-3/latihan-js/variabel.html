@@ -1,42 +1,42 @@
 <!DOCTYPE html>
-<html lang=" id ">
+<html lang="id">
 
 <head>
-  <meta charset=" UTF -8 ">
-  <title> Variabel , Tipe Data , Operator </title>
+  <meta charset="UTF-8">
+  <title> Variabel, Tipe Data, Operator </title>
 </head>
 
 <body>
   <h1> Latihan Variabel </h1>
-  <pre id = " hasil " > </pre>
+  <pre id="hasil"></pre>
   <script>
-    // Alat bantu : menambahkan satu baris teks ke elemen # hasil
+    // Alat bantu: menambahkan satu baris teks ke elemen # hasil
     // ( cara kerjanya dipelajari lengkap pada subbab 3.5)
-    const hasil = document.getElementById(" hasil ");
+    const hasil = document.getElementById("hasil");
 
     function tampil(teks) {
-      hasil.innerText = hasil.innerText + teks + " \n ";
+      hasil.innerText = hasil.innerText + teks + "\n";
     }
     // ----- Kasus 1: belanja buku -----
-    let namaToko = " Toko Buku Maju ";
+    let namaToko = "Toko Buku Maju";
     const hargaBuku = 50000;
     let jumlah = 3;
     let total = hargaBuku * jumlah;
-    tampil(" Toko : " + namaToko);
-    tampil(" Total : Rp " + total);
+    tampil("Toko: " + namaToko);
+    tampil("Total: Rp" + total);
     jumlah = 5; // let boleh diganti
     total = hargaBuku * jumlah;
-    tampil(" Setelah beli 5 buku : Rp " + total);
+    tampil("Setelah beli 5 buku: Rp" + total);
     // ----- Kasus 2: lulus mata kuliah ? -----
     const nilai = 78;
     const kehadiran = 80;
     let lulus = nilai >= 70 && kehadiran >= 75;
-    tampil(" Lulus ? " + lulus);
+    tampil("Lulus? " + lulus);
     // ----- Kasus 3: === lawan == -----
-    tampil(" 5 === !5 ! : " + (5 === " 5 ")); // false
-    tampil(" 5 == !5 ! : " + (5 == " 5 ")); // true ( membingungkan !)
-    tampil(" Tipe dari 5 : " + typeof 5);
-    tampil(" Tipe dari !5 ! : " + typeof " 5 ");
+    tampil("5 === !5 !: " + (5 === "5")); // false
+    tampil("5 == !5 !: " + (5 == "5")); // true ( membingungkan !)
+    tampil("Tipe dari 5: " + typeof 5);
+    tampil("Tipe dari !5 !: " + typeof "5");
 
   </script>
 </body>

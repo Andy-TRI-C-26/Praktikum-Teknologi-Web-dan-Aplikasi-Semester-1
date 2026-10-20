@@ -1,23 +1,23 @@
 <!DOCTYPE html>
-<html lang=" id ">
+<html lang="id">
 
 <head>
-  <meta charset=" UTF -8 ">
+  <meta charset="UTF-8">
   <title> Latihan Fungsi </title>
 </head>
 
 <body>
   <h1> Latihan Fungsi </h1>
-  <pre id = " hasil " > </pre>
+  <pre id="hasil"></pre>
   <script>
-    const hasil = document.getElementById(" hasil ");
+    const hasil = document.getElementById("hasil");
 
     function tampil(teks) {
-      hasil.innerText = hasil.innerText + teks + " \ n ";
+      hasil.innerText = hasil.innerText + teks + "\n";
     }
     // Fungsi 1: parameter , tanpa return nilai
     function sapaPengguna(nama) {
-      return " Halo , " + nama + " ! Selamat belajar JavaScript . ";
+      return "Halo, " + nama + "! Selamat belajar JavaScript.";
     }
     // Fungsi 2: dua parameter
     function luasPersegiPanjang(panjang, lebar) {
@@ -30,23 +30,23 @@
     // Fungsi 4: percabangan
     function nilaiHuruf(nilai) {
       if (nilai >= 85) {
-        return " A ";
+        return "A";
       } else if (nilai >= 70) {
-        return " B ";
+        return "B";
       } else if (nilai >= 55) {
-        return " C ";
+        return "C";
       } else {
-        return " D ";
+        return "D";
       }
     }
     // ----- Memanggil fungsi ( resep dimasak ) -----
-    tampil(sapaPengguna(" Budi "));
-    tampil(sapaPengguna(" Sari "));
-    tampil(" Luas 8 x 5 = " + luasPersegiPanjang(8, 5));
-    tampil(" 30 derajat C = " + celsiusKeFahrenheit(30) + " derajat F ");
-    tampil(" Nilai 90 -> " + nilaiHuruf(90));
-    tampil(" Nilai 72 -> " + nilaiHuruf(72));
-    tampil(" Nilai 40 -> " + nilaiHuruf(40));
+    tampil(sapaPengguna("Budi"));
+    tampil(sapaPengguna("Sari"));
+    tampil("Luas 8 x 5 =" + luasPersegiPanjang(8, 5));
+    tampil("30 derajat C =" + celsiusKeFahrenheit(30) + "derajat F");
+    tampil("Nilai 90 ->" + nilaiHuruf(90));
+    tampil("Nilai 72 ->" + nilaiHuruf(72));
+    tampil("Nilai 40 ->" + nilaiHuruf(40));
 
   </script>
 </body>
